@@ -1,4 +1,7 @@
 ## [kubernetes-samples](#kubernetes-sample)
+
+![](./img/header.png) 
+
 We wll be exploring various Kubernetes objects in order to understand what they’re used for and the different options they offer you. 
 We will also look at some examples of how to create these objects. 
 
