@@ -19,9 +19,15 @@ kubectl get pods
 kubectl describe pod <podName>
 kubectl logs -f <podName>
 kubectl delete pod <podName>
-
+kubectl get namespaces
+kubectl create namespace <nameSpace>
+kubectl get pods -n <nameSpace>
+kubectl describe pod <podName> -n <nameSpace>
+kubectl delete namespace <nameSpace>
+kubectl get pods --all-namespaces
 ```
 
 ## [References](#references)
 
 - [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
