@@ -1,0 +1,19 @@
+apiVersion: v1 
+kind: Pod 
+metadata:
+ name: demo-config-map-volume-pod 
+ labels:
+  name: demo-app
+  tier: app
+spec:
+ containers: 
+ - name: demo-app-container 
+   image: busybox 
+   command: ['sh', '-c', 'echo $(cat /etc/config/messageTwo) & sleep 3600'] 
+   volumeMounts:
+     - mountPath: /etc/config
+       name: config-volume
+ volumes:
+   - name: config-volume
+     configMap:
+       name: demo-config-map

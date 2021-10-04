@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-config-map
+data:
+  messageOne: Hey there!
+  messageTwo: How are you?

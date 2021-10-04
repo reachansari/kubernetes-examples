@@ -1,0 +1,18 @@
+apiVersion: v1 
+kind: Pod 
+metadata:
+ name: demo-config-map-pod 
+ labels:
+  name: demo-app
+  tier: app
+spec:
+ containers: 
+ - name: demo-app-container 
+   image: busybox 
+   command: ['sh', '-c', 'echo $GREETING & sleep 3600'] 
+   env:
+     - name: GREETING
+       valueFrom:
+         configMapKeyRef:
+           name: demo-config-map
+           key: messageOne
