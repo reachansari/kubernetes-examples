@@ -15,19 +15,19 @@ kubectl api-resources
 kubectl get nodes
 kubectl describe node docker-desktop
 kubectl apply -f <ymlfile>
-#Namespaces
+**#Pods**
 kubectl get pods
 kubectl describe pod <podName>
 kubectl logs -f <podName>
 kubectl delete pod <podName>
-#Namespaces
+**#Namespaces**
 kubectl get namespaces
 kubectl create namespace <nameSpace>
 kubectl get pods -n <nameSpace>
 kubectl describe pod <podName> -n <nameSpace>
 kubectl delete namespace <nameSpace>
 kubectl get pods --all-namespaces
-#ConfigMaps
+**#ConfigMaps**
 kubectl get configmap
 kubectl delete configmap <configmapName>
 ```
