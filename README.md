@@ -15,7 +15,7 @@ kubectl api-resources
 kubectl get nodes
 kubectl describe node docker-desktop
 kubectl apply -f <ymlfile>
-**#Pods**
+** #Pods**
 kubectl get pods
 kubectl describe pod <podName>
 kubectl logs -f <podName>
