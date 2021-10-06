@@ -39,4 +39,5 @@ kubectl delete configmap <configmapName>
 ## [References](#references)
 
 - [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+- [Docker Desktop windows 10 installation](https://andrewlock.net/running-kubernetes-and-the-dashboard-with-docker-desktop/)
 
