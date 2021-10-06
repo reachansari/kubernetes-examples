@@ -15,6 +15,7 @@ kubectl api-resources
 kubectl get nodes
 kubectl describe node docker-desktop
 kubectl apply -f <ymlfile>
+kubectl exec -it <podName> -- sh # exec into the running container
 
 # Pods
 kubectl get pods
