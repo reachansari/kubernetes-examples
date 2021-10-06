@@ -1,0 +1,20 @@
+apiVersion: v1 
+kind: Pod 
+metadata:
+ name: demo-container-resources-pod
+ labels:
+  name: demo-app
+  tier: app
+spec:
+ containers: 
+ - name: demo-container-resources-pod
+   image: busybox 
+   command: [ "sh", "-c", "echo hello pod security & sleep 3600" ]
+   resources:
+    requests:
+      memory: "32Mi"
+      cpu: "400m"
+    limits:
+      memory: "64Mi"
+      cpu: "600m"
+
