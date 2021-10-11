@@ -34,6 +34,10 @@ kubectl get pods --all-namespaces
 #ConfigMaps
 kubectl get configmap
 kubectl delete configmap <configmapName>
+
+#Secrets
+kubectl get secret
+kubectl delete secret <secretName>
 ```
 
 ## [References](#references)
