@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-log-writer-reader
+spec:
+  containers:
+    - name: sample-log-writer
+      image: busybox
+      imagePullPolicy: Always
+      command: ['sh', '-c', 'echo hello from sample-log-writer container >> /var/demo/logs/hello.txt & sleep 3600']
+      volumeMounts:
+        - name: log-volume
+          mountPath: /var/demo/logs
+    - name: sample-log-reader
+      image: busybox
+      imagePullPolicy: Always
+      command: ['sh', '-c', 'sleep 10 && cat /var/demo/logs/hello.txt']
+      volumeMounts:
+        - name: log-volume
+          mountPath: /var/demo/logs
+  volumes:
+    - name: log-volume
